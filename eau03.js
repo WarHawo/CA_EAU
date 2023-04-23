@@ -10,10 +10,13 @@ function Fibonacci(n) {
     }
     return suite[n];
 }
+function nFib() {
+    myArgv = process.argv[2];
+    let n = Number(myArgv);
+    if (isNaN(n) || process.argv[3] || n < 0)
+        return (-1);
+    else
+        return (Fibonacci(n));
+}
 
-myArgv = process.argv[2];
-let n = Number(myArgv);
-if (isNaN(n) || process.argv[3])
-    console.log("Erreur veuillez rentrer un entier en argument");
-else
-    console.log(Fibonacci(n));
+console.log(nFib());
