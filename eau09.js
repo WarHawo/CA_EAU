@@ -5,20 +5,20 @@ function parseStr(str) {
     console.error("erreur");
     process.exit(1);
   }
-  for (let i= 0; i < str.length; i++) {
-    if (!(/^[0-9\s\n]+$/.test(str[i]))) {
-        console.error("erreur");
-        process.exit(1);
-    }
+  if ((!/^\d+$/.test(str))) {
+      console.error("erreur");
+      process.exit(1);
   }
-  return Number(str);
+  return str ;
 }
 
 function arrayMinMax(arg1, arg2)
 {
-  let output = "";
   parseStr(arg1);
   parseStr(arg2);
+  
+  let output = "";
+  
   let min =0;
   let max = 0;
   
