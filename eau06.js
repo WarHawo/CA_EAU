@@ -30,7 +30,7 @@ function parseStr(str) {
     process.exit(1);
   }
   for (let i= 0; i < str.length; i++) {
-    if (!(/[a-zA-Z\s]/.test(str[i]))) {
+    if (!(/^[A-Za-z\s\n]+$/.test(str[i]))) {
       console.error("erreur");
       process.exit(1);
     }
