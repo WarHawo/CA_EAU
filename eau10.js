@@ -9,14 +9,15 @@ function findFirstIndex()
     process.exit(1);
   }
   
-  let newStr = "";
+  let newStr = [];
   
   for (let i = 0; i < mystr.length - 1 ; i++) {
-    newStr += mystr[i];
+    newStr[i] = mystr[i];
   }
-  newStr = newStr.split(/[ \t\n]+/);
+  //newStr = newStr.split(/[ \t\n]+/);
   let lastWord = mystr[mystr.length - 1];
   return newStr.indexOf(lastWord);
+  //return newStr;
 }
   
 console.log(findFirstIndex());
