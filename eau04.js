@@ -1,6 +1,6 @@
 /* Programme qui affiche le premier nombre premier supérieur au nombre donné en argument. */
 
-function isPremier(n) {
+function isPrime(n) {
     if (n < 2)
         return false;
     for (let i = 2; i <= Math.sqrt(n) ; i++) {
@@ -10,18 +10,17 @@ function isPremier(n) {
     return true;
 }
 
-function nextPremier() {
-    const myArgv = process.argv[2] - 0;
-
+function nextPrime(myArgv) {
     if (isNaN(myArgv) || process.argv[3] || myArgv < 0)
         return -1;
-    if (isPremier(myArgv))
+    if (isPrime(myArgv))
         return myArgv;
     let i = myArgv
-    while (!isPremier(i)) {
+    while (!isPrime(i)) {
         i++;
     }
     return i;
 }
 
-console.log(nextPremier());
+const myArgv = process.argv[2] - 0;
+console.log(nextPrime(myArgv));
