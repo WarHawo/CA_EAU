@@ -9,7 +9,7 @@ function numberOnly(str) {
       return false;
     }
   }
-  return true;;
+  return true;
 }
 
 const str = process.argv[2];
