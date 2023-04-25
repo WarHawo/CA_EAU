@@ -23,6 +23,7 @@ function display(argv) {
     }
     return newArray;
 }
+
 function my_bubble_sort(array) {
     parseArg(array);
 
