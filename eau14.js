@@ -1,15 +1,9 @@
 /*programme qui trie les éléments donnés en argument par ordre ASCII.*/
 
 function parseStr(str) {
-  if (str == "") {
+  if (str == "" || str.length < 2) {
     console.error("erreur");
     process.exit(1);
-  }
-  for (let i = 0; i < str.length; i++) {
-    if (!(/^[A-Za-z\s\n?!.,;\-_]+$/.test(str[i]))) {
-      console.error("erreur");
-      process.exit(1);
-    }
   }
   return str;
 }
