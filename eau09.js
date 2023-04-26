@@ -19,16 +19,16 @@ function arrayMinMax(arg1, arg2)
   
   let output = "";
   
-  let min =0;
+  let min = 0;
   let max = 0;
   
-  if (arg1 >= arg2) {
-    min = arg2;
-    max = arg1;
+  if (Number(arg1) >= Number(arg2)) {
+    min = Number(arg2);
+    max = Number(arg1);
   }
   else {
-    min = arg1;
-    max = arg2;
+    min = Number(arg1);
+    max = Number(arg2);
   }
   for (let i = min; i < max ; i++) {
     output += i;
