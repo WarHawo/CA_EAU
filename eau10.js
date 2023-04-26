@@ -14,10 +14,8 @@ function findFirstIndex()
   for (let i = 0; i < mystr.length - 1 ; i++) {
     newStr[i] = mystr[i];
   }
-  //newStr = newStr.split(/[ \t\n]+/);
   let lastWord = mystr[mystr.length - 1];
   return newStr.indexOf(lastWord);
-  //return newStr;
 }
   
 console.log(findFirstIndex());
